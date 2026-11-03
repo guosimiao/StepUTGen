@@ -1,0 +1,64 @@
+profile_name: server_h100_pcie
+
+project_name: qwen_coder_align_lora
+run_name: qwen25_coder_7b_lora_h100
+
+ckpt_path: ./outputs/fsdpo_after_sft
+
+data_path: ./data/mutpy_train/train_sft_dpo_final/dpo_data/dpo_train.jsonl
+max_train_samples: null
+
+gradient_accumulation: 32
+mixed_precision: bf16
+
+policy_model_path: /data/models/Qwen2.5-Coder-7B-Instruct
+ref_model_path: /data/models/Qwen2.5-Coder-7B-Instruct
+policy_tokenizer_name: /data/models/Qwen2.5-Coder-7B-Instruct
+trust_remote_code: true
+expected_visible_cuda_devices: "0"
+
+model_dtype: bf16
+use_grad_ckpt: true
+
+policy_load_in_4bit: false
+ref_load_in_4bit: false
+bnb_compute_dtype: bf16
+bnb_4bit_quant_type: nf4
+bnb_4bit_use_double_quant: true
+
+max_prompt_len: 1024
+max_response_len: 2048
+
+batch_size: 1
+clip_grad_norm: 1.0
+warmup_ratio: 0.03
+learning_rate: 1e-4
+weight_decay: 0.01
+optimizer: AdamW
+
+loss_type: fullstepdpo
+beta: 0.05
+token_rate: 1
+reward_temp: 0.5
+step_weight_strategy: custom
+step_weights: [1, 1, 1, 1]
+
+lora_r: 32
+lora_alpha: 64
+lora_dropout: 0.05
+lora_bias: none
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+save_per_step: 1000
+log_interval: 10
+epoch: 1
+seed: 888
+
+use_wandb: false

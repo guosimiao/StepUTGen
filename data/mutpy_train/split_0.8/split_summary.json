@@ -1,0 +1,23 @@
+{
+  "buggy_path": "data/mutpy_train/alldataset_mutpy_selected.jsonl",
+  "buggy_records": 744,
+  "correct_path": "data/mutpy_train/alldataset_filter_selected.jsonl",
+  "correct_records": 744,
+  "mode": "paired",
+  "seed": 42,
+  "summary_path": "data/mutpy_train/split_0.8/split_summary.json",
+  "tasks": 744,
+  "test_buggy_path": "data/mutpy_train/split_0.8/alldataset_mutpy_selected_test.jsonl",
+  "test_buggy_records": 149,
+  "test_correct_path": "data/mutpy_train/split_0.8/alldataset_filter_selected_test.jsonl",
+  "test_correct_records": 149,
+  "test_task_nums_path": "data/mutpy_train/split_0.8/test_task_nums.jsonl",
+  "test_tasks": 149,
+  "train_buggy_path": "data/mutpy_train/split_0.8/alldataset_mutpy_selected_train.jsonl",
+  "train_buggy_records": 595,
+  "train_correct_path": "data/mutpy_train/split_0.8/alldataset_filter_selected_train.jsonl",
+  "train_correct_records": 595,
+  "train_ratio": 0.8,
+  "train_task_nums_path": "data/mutpy_train/split_0.8/train_task_nums.jsonl",
+  "train_tasks": 595
+}

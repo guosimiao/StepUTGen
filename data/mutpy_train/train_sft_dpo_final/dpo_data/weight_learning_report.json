@@ -1,0 +1,47 @@
+{
+  "target": "test_execution.meets_expectation",
+  "feature_names": [
+    "step1",
+    "step2",
+    "step3",
+    "step4"
+  ],
+  "labeled_responses": 11151,
+  "negative_responses": 2770,
+  "strong_negative_responses": 23,
+  "strong_negative_share_of_negatives": 0.008303,
+  "strong_negative_pair_weight": 2.0,
+  "usable_groups": 228,
+  "skipped_candidates_missing_label": 9,
+  "skipped_groups_without_both_labels": 130,
+  "pairwise_training_examples": 26836,
+  "max_pairs_per_group": 64,
+  "step4_weight_min": 1.0,
+  "accuracy": 0.995193,
+  "auc": 0.999932,
+  "intercept": 3.721364245317185e-15,
+  "coefficients": {
+    "step1": -0.12140010074804725,
+    "step2": 0.5079552110670732,
+    "step3": -1.7337280575219791,
+    "step4": 4.885986144405873
+  },
+  "by_impl_type": {
+    "buggy": {
+      "examples": 6684,
+      "accuracy": 0.9807,
+      "auc": 0.998903
+    },
+    "correct": {
+      "examples": 20152,
+      "accuracy": 1.0,
+      "auc": 1.0
+    }
+  },
+  "step_weights": [
+    0.0669879633615839,
+    0.2802871238048297,
+    0.9566623988003607,
+    2.6960625140332257
+  ]
+}

@@ -1,0 +1,444 @@
+{
+  "input": "data/mutpy_train/train_sft_dpo_final/scored_samples.jsonl",
+  "output_dir": "data/mutpy_train/train_sft_dpo_final/dpo_data",
+  "reward_records_dir": "data/mutpy_train/train_sft_dpo_final/dpo_data/reward_records",
+  "output_weights": "data/mutpy_train/train_sft_dpo_final/dpo_data/learned_step_weights.json",
+  "output_weight_report": "data/mutpy_train/train_sft_dpo_final/dpo_data/weight_learning_report.json",
+  "excluded_sft_responses": 624,
+  "train_tasks": 535,
+  "valid_tasks": 60,
+  "step_weights": [
+    0.0669879633615839,
+    0.2802871238048297,
+    0.9566623988003607,
+    2.6960625140332257
+  ],
+  "training_data_selection": {
+    "pipeline": [
+      "chosen_step4_gate",
+      "balance_correct_buggy",
+      "learn_weights",
+      "construct_pairs"
+    ],
+    "input_records": 1070,
+    "retained_records": 358,
+    "chosen_gate": {
+      "applied": true,
+      "construction_mode": "step4-gate-before-weight",
+      "input_groups": 1070,
+      "retained_groups": 597,
+      "skipped_insufficient_gated_chosen": 473,
+      "input_candidates": 33688,
+      "gate_qualified_candidates": 14360,
+      "gate_qualified_candidate_ratio": 0.426265,
+      "retained_candidates": 18663,
+      "retained_gate_qualified_candidates": 14217,
+      "retained_gate_qualified_candidate_ratio": 0.761775,
+      "gated_chosen_count_distribution": {
+        "0": 396,
+        "1": 35,
+        "2": 18,
+        "3": 24,
+        "4": 14,
+        "5": 13,
+        "6": 11,
+        "7": 17,
+        "8": 14,
+        "9": 6,
+        "10": 13,
+        "11": 7,
+        "12": 9,
+        "13": 5,
+        "14": 3,
+        "15": 9,
+        "16": 6,
+        "17": 11,
+        "18": 14,
+        "19": 12,
+        "20": 9,
+        "21": 11,
+        "22": 21,
+        "23": 13,
+        "24": 12,
+        "25": 16,
+        "26": 19,
+        "27": 20,
+        "28": 19,
+        "29": 33,
+        "30": 68,
+        "31": 142,
+        "32": 50
+      },
+      "min_gated_chosen_per_group": 4,
+      "gate_settings": {
+        "construction_mode": "step4-gate-before-weight",
+        "require_format_ok": true,
+        "require_step1_positive": false,
+        "require_step4_positive": true,
+        "step1_min_score": 1.0,
+        "step4_min_score": 1.0,
+        "require_meets_expectation": false,
+        "require_asserts": false,
+        "require_target_call": false
+      },
+      "preserved_all_candidates_in_retained_groups": true
+    },
+    "impl_type_balance": {
+      "applied": true,
+      "input_records": 597,
+      "retained_records": 358,
+      "input_by_impl_type": {
+        "correct": 179,
+        "buggy": 418
+      },
+      "retained_by_impl_type": {
+        "correct": 179,
+        "buggy": 179
+      },
+      "removed_by_impl_type": {
+        "correct": 0,
+        "buggy": 239
+      },
+      "target_per_impl_type": 179,
+      "other_impl_type_records": 0,
+      "seed": 42,
+      "preserved_all_candidates_in_retained_groups": true
+    },
+    "same_records_used_for_weight_learning_and_train_pairs": true
+  },
+  "pre_weight_gate": {
+    "applied": true,
+    "construction_mode": "step4-gate-before-weight",
+    "input_groups": 1070,
+    "retained_groups": 597,
+    "skipped_insufficient_gated_chosen": 473,
+    "input_candidates": 33688,
+    "gate_qualified_candidates": 14360,
+    "gate_qualified_candidate_ratio": 0.426265,
+    "retained_candidates": 18663,
+    "retained_gate_qualified_candidates": 14217,
+    "retained_gate_qualified_candidate_ratio": 0.761775,
+    "gated_chosen_count_distribution": {
+      "0": 396,
+      "1": 35,
+      "2": 18,
+      "3": 24,
+      "4": 14,
+      "5": 13,
+      "6": 11,
+      "7": 17,
+      "8": 14,
+      "9": 6,
+      "10": 13,
+      "11": 7,
+      "12": 9,
+      "13": 5,
+      "14": 3,
+      "15": 9,
+      "16": 6,
+      "17": 11,
+      "18": 14,
+      "19": 12,
+      "20": 9,
+      "21": 11,
+      "22": 21,
+      "23": 13,
+      "24": 12,
+      "25": 16,
+      "26": 19,
+      "27": 20,
+      "28": 19,
+      "29": 33,
+      "30": 68,
+      "31": 142,
+      "32": 50
+    },
+    "min_gated_chosen_per_group": 4,
+    "gate_settings": {
+      "construction_mode": "step4-gate-before-weight",
+      "require_format_ok": true,
+      "require_step1_positive": false,
+      "require_step4_positive": true,
+      "step1_min_score": 1.0,
+      "step4_min_score": 1.0,
+      "require_meets_expectation": false,
+      "require_asserts": false,
+      "require_target_call": false
+    },
+    "preserved_all_candidates_in_retained_groups": true
+  },
+  "impl_type_balance": {
+    "applied": true,
+    "input_records": 597,
+    "retained_records": 358,
+    "input_by_impl_type": {
+      "correct": 179,
+      "buggy": 418
+    },
+    "retained_by_impl_type": {
+      "correct": 179,
+      "buggy": 179
+    },
+    "removed_by_impl_type": {
+      "correct": 0,
+      "buggy": 239
+    },
+    "target_per_impl_type": 179,
+    "other_impl_type_records": 0,
+    "seed": 42,
+    "preserved_all_candidates_in_retained_groups": true
+  },
+  "reward_records": {
+    "train": {
+      "split": "train",
+      "reward_records": 1070,
+      "responses": 33688,
+      "by_impl_type": {
+        "buggy": 535,
+        "correct": 535
+      },
+      "skipped_out_of_split": 3840,
+      "skipped_excluded_sft_responses": 552,
+      "skipped_missing_prompt_or_response": 0
+    },
+    "valid": {
+      "split": "valid",
+      "reward_records": 120,
+      "responses": 3768,
+      "by_impl_type": {
+        "buggy": 60,
+        "correct": 60
+      },
+      "skipped_out_of_split": 34240,
+      "skipped_excluded_sft_responses": 72,
+      "skipped_missing_prompt_or_response": 0
+    }
+  },
+  "train": {
+    "split": "train",
+    "final_pairs": 3584,
+    "filter_summary": {
+      "input_records": 358,
+      "output_records": 3584,
+      "records_processed": 358,
+      "records_emitted": 224,
+      "k": 4,
+      "min_gap": 0.2,
+      "high_threshold": null,
+      "low_threshold": null,
+      "expected_pairs_per_record": 16,
+      "step_weights": [
+        0.0669879633615839,
+        0.2802871238048297,
+        0.9566623988003607,
+        2.6960625140332257
+      ],
+      "total_correct_pairs": 2256,
+      "total_buggy_pairs": 1328,
+      "avg_pair_gap": 1.4207,
+      "pairs_per_record_distribution": {
+        "16": 224
+      },
+      "skipped_insufficient_high_reward": 0,
+      "skipped_insufficient_low_reward": 0,
+      "skipped_min_gap_not_met": 134,
+      "skipped_no_valid_pairs": 0,
+      "skipped_insufficient_chosen_candidates": 0,
+      "cleaning_summary": {
+        "step_weights": [
+          0.0669879633615839,
+          0.2802871238048297,
+          0.9566623988003607,
+          2.6960625140332257
+        ],
+        "prompt_records_total": 358,
+        "prompt_records_kept": 358,
+        "prompt_records_removed_all_candidates": 0,
+        "responses_total": 11160,
+        "responses_kept": 11155,
+        "responses_removed_missing_step_labels": 5,
+        "responses_removed_invalid_step_scores": 0
+      }
+    },
+    "enrich_summary": {
+      "filtered_records": 3584,
+      "enriched_records": 3584,
+      "skipped_chosen_format_not_ok": 0,
+      "pair_types": {
+        "format_preference": 80,
+        "semantic_preference": 3504
+      },
+      "by_impl_type": {
+        "buggy": 1328,
+        "correct": 2256
+      },
+      "chosen_step4_distribution": {
+        "1.0": 3584
+      },
+      "chosen_no_test_code_count": 0
+    },
+    "pair_types": {
+      "format_preference": 80,
+      "semantic_preference": 3504
+    },
+    "by_impl_type": {
+      "buggy": 1328,
+      "correct": 2256
+    },
+    "chosen_gate_settings": {
+      "construction_mode": "step4-gate-before-weight",
+      "require_format_ok": true,
+      "require_step1_positive": false,
+      "require_step4_positive": true,
+      "step1_min_score": 1.0,
+      "step4_min_score": 1.0,
+      "require_meets_expectation": false,
+      "require_asserts": false,
+      "require_target_call": false
+    },
+    "chosen_gates": {},
+    "chosen_step1_distribution": {
+      "-1.0": 784,
+      "1.0": 2800
+    },
+    "chosen_step4_distribution": {
+      "1.0": 3584
+    },
+    "chosen_step1_positive_ratio": 0.78125,
+    "chosen_step4_positive_ratio": 1.0,
+    "chosen_step1_step4_positive_ratio": 0.78125,
+    "chosen_no_test_code_count": 0
+  },
+  "valid": {
+    "split": "valid",
+    "final_pairs": 656,
+    "filter_summary": {
+      "input_records": 120,
+      "output_records": 656,
+      "records_processed": 120,
+      "records_emitted": 41,
+      "k": 4,
+      "min_gap": 0.2,
+      "high_threshold": null,
+      "low_threshold": null,
+      "expected_pairs_per_record": 16,
+      "step_weights": [
+        0.0669879633615839,
+        0.2802871238048297,
+        0.9566623988003607,
+        2.6960625140332257
+      ],
+      "total_correct_pairs": 368,
+      "total_buggy_pairs": 288,
+      "avg_pair_gap": 1.4639,
+      "pairs_per_record_distribution": {
+        "16": 41
+      },
+      "skipped_insufficient_high_reward": 0,
+      "skipped_insufficient_low_reward": 0,
+      "skipped_min_gap_not_met": 37,
+      "skipped_no_valid_pairs": 0,
+      "skipped_insufficient_chosen_candidates": 42,
+      "cleaning_summary": {
+        "step_weights": [
+          0.0669879633615839,
+          0.2802871238048297,
+          0.9566623988003607,
+          2.6960625140332257
+        ],
+        "prompt_records_total": 120,
+        "prompt_records_kept": 120,
+        "prompt_records_removed_all_candidates": 0,
+        "responses_total": 3768,
+        "responses_kept": 3759,
+        "responses_removed_missing_step_labels": 9,
+        "responses_removed_invalid_step_scores": 0
+      }
+    },
+    "enrich_summary": {
+      "filtered_records": 656,
+      "enriched_records": 656,
+      "skipped_chosen_format_not_ok": 0,
+      "pair_types": {
+        "format_preference": 36,
+        "semantic_preference": 620
+      },
+      "by_impl_type": {
+        "buggy": 288,
+        "correct": 368
+      },
+      "chosen_step4_distribution": {
+        "1.0": 656
+      },
+      "chosen_no_test_code_count": 0
+    },
+    "pair_types": {
+      "format_preference": 36,
+      "semantic_preference": 620
+    },
+    "by_impl_type": {
+      "buggy": 288,
+      "correct": 368
+    },
+    "chosen_gate_settings": {
+      "construction_mode": "step4-gate-before-weight",
+      "require_format_ok": true,
+      "require_step1_positive": false,
+      "require_step4_positive": true,
+      "step1_min_score": 1.0,
+      "step4_min_score": 1.0,
+      "require_meets_expectation": false,
+      "require_asserts": false,
+      "require_target_call": false
+    },
+    "chosen_gates": {
+      "skipped_no_step4_positive": 34
+    },
+    "chosen_step1_distribution": {
+      "-1.0": 252,
+      "1.0": 404
+    },
+    "chosen_step4_distribution": {
+      "1.0": 656
+    },
+    "chosen_step1_positive_ratio": 0.615854,
+    "chosen_step4_positive_ratio": 1.0,
+    "chosen_step1_step4_positive_ratio": 0.615854,
+    "chosen_no_test_code_count": 0
+  },
+  "settings": {
+    "learn_step_weights": true,
+    "weights_file": null,
+    "k": 4,
+    "min_margin": 0.2,
+    "high_threshold": null,
+    "low_threshold": null,
+    "max_pairs_per_group": 16,
+    "construction_mode": "step4-gate-before-weight",
+    "require_chosen_format_ok": true,
+    "require_chosen_step1_positive": false,
+    "require_chosen_step4_positive": false,
+    "effective_chosen_gates": {
+      "construction_mode": "step4-gate-before-weight",
+      "require_format_ok": true,
+      "require_step1_positive": false,
+      "require_step4_positive": true,
+      "step1_min_score": 1.0,
+      "step4_min_score": 1.0,
+      "require_meets_expectation": false,
+      "require_asserts": false,
+      "require_target_call": false
+    },
+    "chosen_step1_min_score": 1.0,
+    "chosen_step4_min_score": 1.0,
+    "min_gated_chosen_per_group": 4,
+    "balance_impl_types": true,
+    "require_chosen_meets_expectation": false,
+    "require_chosen_asserts": false,
+    "require_chosen_target_call": false,
+    "weight_learning_target": "execution",
+    "step4_weight_min": 1.0,
+    "balance_pair_types": false,
+    "update_reward_data_common": true
+  }
+}

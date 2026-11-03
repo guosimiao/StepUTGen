@@ -1,0 +1,246 @@
+{
+  "input": "data/mutpy_train/train_sft_dpo_final/scored_samples.jsonl",
+  "step_weights": [
+    0.0669879633615839,
+    0.2802871238048297,
+    0.9566623988003607,
+    2.6960625140332257
+  ],
+  "learn_step_weights": true,
+  "weights_file": null,
+  "initial_step_weights": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "weight_learning_method": "logistic",
+  "weight_learning_target": "execution",
+  "step4_weight_min": 1.0,
+  "training_data_selection": {
+    "pipeline": [
+      "chosen_step4_gate",
+      "balance_correct_buggy",
+      "learn_weights",
+      "construct_pairs"
+    ],
+    "input_records": 1070,
+    "retained_records": 358,
+    "chosen_gate": {
+      "applied": true,
+      "construction_mode": "step4-gate-before-weight",
+      "input_groups": 1070,
+      "retained_groups": 597,
+      "skipped_insufficient_gated_chosen": 473,
+      "input_candidates": 33688,
+      "gate_qualified_candidates": 14360,
+      "gate_qualified_candidate_ratio": 0.426265,
+      "retained_candidates": 18663,
+      "retained_gate_qualified_candidates": 14217,
+      "retained_gate_qualified_candidate_ratio": 0.761775,
+      "gated_chosen_count_distribution": {
+        "0": 396,
+        "1": 35,
+        "2": 18,
+        "3": 24,
+        "4": 14,
+        "5": 13,
+        "6": 11,
+        "7": 17,
+        "8": 14,
+        "9": 6,
+        "10": 13,
+        "11": 7,
+        "12": 9,
+        "13": 5,
+        "14": 3,
+        "15": 9,
+        "16": 6,
+        "17": 11,
+        "18": 14,
+        "19": 12,
+        "20": 9,
+        "21": 11,
+        "22": 21,
+        "23": 13,
+        "24": 12,
+        "25": 16,
+        "26": 19,
+        "27": 20,
+        "28": 19,
+        "29": 33,
+        "30": 68,
+        "31": 142,
+        "32": 50
+      },
+      "min_gated_chosen_per_group": 4,
+      "gate_settings": {
+        "construction_mode": "step4-gate-before-weight",
+        "require_format_ok": true,
+        "require_step1_positive": false,
+        "require_step4_positive": true,
+        "step1_min_score": 1.0,
+        "step4_min_score": 1.0,
+        "require_meets_expectation": false,
+        "require_asserts": false,
+        "require_target_call": false
+      },
+      "preserved_all_candidates_in_retained_groups": true
+    },
+    "impl_type_balance": {
+      "applied": true,
+      "input_records": 597,
+      "retained_records": 358,
+      "input_by_impl_type": {
+        "correct": 179,
+        "buggy": 418
+      },
+      "retained_by_impl_type": {
+        "correct": 179,
+        "buggy": 179
+      },
+      "removed_by_impl_type": {
+        "correct": 0,
+        "buggy": 239
+      },
+      "target_per_impl_type": 179,
+      "other_impl_type_records": 0,
+      "seed": 42,
+      "preserved_all_candidates_in_retained_groups": true
+    },
+    "same_records_used_for_weight_learning_and_train_pairs": true
+  },
+  "pre_weight_gate_summary": {
+    "applied": true,
+    "construction_mode": "step4-gate-before-weight",
+    "input_groups": 1070,
+    "retained_groups": 597,
+    "skipped_insufficient_gated_chosen": 473,
+    "input_candidates": 33688,
+    "gate_qualified_candidates": 14360,
+    "gate_qualified_candidate_ratio": 0.426265,
+    "retained_candidates": 18663,
+    "retained_gate_qualified_candidates": 14217,
+    "retained_gate_qualified_candidate_ratio": 0.761775,
+    "gated_chosen_count_distribution": {
+      "0": 396,
+      "1": 35,
+      "2": 18,
+      "3": 24,
+      "4": 14,
+      "5": 13,
+      "6": 11,
+      "7": 17,
+      "8": 14,
+      "9": 6,
+      "10": 13,
+      "11": 7,
+      "12": 9,
+      "13": 5,
+      "14": 3,
+      "15": 9,
+      "16": 6,
+      "17": 11,
+      "18": 14,
+      "19": 12,
+      "20": 9,
+      "21": 11,
+      "22": 21,
+      "23": 13,
+      "24": 12,
+      "25": 16,
+      "26": 19,
+      "27": 20,
+      "28": 19,
+      "29": 33,
+      "30": 68,
+      "31": 142,
+      "32": 50
+    },
+    "min_gated_chosen_per_group": 4,
+    "gate_settings": {
+      "construction_mode": "step4-gate-before-weight",
+      "require_format_ok": true,
+      "require_step1_positive": false,
+      "require_step4_positive": true,
+      "step1_min_score": 1.0,
+      "step4_min_score": 1.0,
+      "require_meets_expectation": false,
+      "require_asserts": false,
+      "require_target_call": false
+    },
+    "preserved_all_candidates_in_retained_groups": true
+  },
+  "impl_type_balance_summary": {
+    "applied": true,
+    "input_records": 597,
+    "retained_records": 358,
+    "input_by_impl_type": {
+      "correct": 179,
+      "buggy": 418
+    },
+    "retained_by_impl_type": {
+      "correct": 179,
+      "buggy": 179
+    },
+    "removed_by_impl_type": {
+      "correct": 0,
+      "buggy": 239
+    },
+    "target_per_impl_type": 179,
+    "other_impl_type_records": 0,
+    "seed": 42,
+    "preserved_all_candidates_in_retained_groups": true
+  },
+  "learning_report": {
+    "target": "test_execution.meets_expectation",
+    "feature_names": [
+      "step1",
+      "step2",
+      "step3",
+      "step4"
+    ],
+    "labeled_responses": 11151,
+    "negative_responses": 2770,
+    "strong_negative_responses": 23,
+    "strong_negative_share_of_negatives": 0.008303,
+    "strong_negative_pair_weight": 2.0,
+    "usable_groups": 228,
+    "skipped_candidates_missing_label": 9,
+    "skipped_groups_without_both_labels": 130,
+    "pairwise_training_examples": 26836,
+    "max_pairs_per_group": 64,
+    "step4_weight_min": 1.0,
+    "accuracy": 0.995193,
+    "auc": 0.999932,
+    "intercept": 3.721364245317185e-15,
+    "coefficients": {
+      "step1": -0.12140010074804725,
+      "step2": 0.5079552110670732,
+      "step3": -1.7337280575219791,
+      "step4": 4.885986144405873
+    },
+    "by_impl_type": {
+      "buggy": {
+        "examples": 6684,
+        "accuracy": 0.9807,
+        "auc": 0.998903
+      },
+      "correct": {
+        "examples": 20152,
+        "accuracy": 1.0,
+        "auc": 1.0
+      }
+    },
+    "step_weights": [
+      0.0669879633615839,
+      0.2802871238048297,
+      0.9566623988003607,
+      2.6960625140332257
+    ]
+  },
+  "min_reward_gap": 0.01,
+  "weight_learning_max_iter": 10,
+  "weight_learning_epsilon": 0.001,
+  "seed": 42
+}

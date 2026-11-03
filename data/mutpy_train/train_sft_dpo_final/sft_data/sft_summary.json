@@ -1,0 +1,40 @@
+{
+  "input": "data/mutpy_train/train_sft_dpo_final/scored_samples.jsonl",
+  "output_dir": "data/mutpy_train/train_sft_dpo_final/sft_data",
+  "train_tasks": 535,
+  "valid_tasks": 60,
+  "train": {
+    "split": "train",
+    "candidates": 11425,
+    "selected": 552,
+    "by_impl_type": {
+      "buggy": 276,
+      "correct": 276
+    },
+    "rejection_reasons": {
+      "format_ok=false": 261,
+      "low_step4_score": 7727,
+      "low_total_score": 14827
+    }
+  },
+  "valid": {
+    "split": "valid",
+    "candidates": 1570,
+    "selected": 72,
+    "by_impl_type": {
+      "buggy": 36,
+      "correct": 36
+    },
+    "rejection_reasons": {
+      "format_ok=false": 77,
+      "low_step4_score": 882,
+      "low_total_score": 1311
+    }
+  },
+  "settings": {
+    "max_samples_per_impl": 1,
+    "min_total_score": 1.0,
+    "min_step4_score": 0.0,
+    "balance_impl_types": true
+  }
+}

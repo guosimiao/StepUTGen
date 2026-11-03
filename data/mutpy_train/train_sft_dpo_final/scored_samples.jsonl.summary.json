@@ -1,0 +1,37 @@
+{
+  "input_generations": "data/mutpy_train/train_sft_dpo_1/unit_test_step_generations.jsonl",
+  "evaluated_results": "eval_results/mutpy_response_sft_dpo_1/unit_test_step_generations/detailed_results.jsonl",
+  "output": "data/mutpy_train/train_sft_dpo_final/scored_samples.jsonl",
+  "source_records": 1190,
+  "evaluated_records": 38080,
+  "scored_samples": 38080,
+  "missing_evaluated_results": 0,
+  "by_impl_type": {
+    "buggy": 19040,
+    "correct": 19040
+  },
+  "format": {
+    "format_ok": 37742,
+    "format_bad": 338
+  },
+  "syntax": {
+    "syntax_ok": 37825,
+    "syntax_bad": 255
+  },
+  "script": {
+    "script_ok": 37964,
+    "script_bad": 116
+  },
+  "meets_expectation": {
+    "false": 16947,
+    "true": 21017,
+    "missing": 116
+  },
+  "execution_status": {
+    "failed": 31761,
+    "passed": 5303,
+    "timeout": 761,
+    "test_compile_error": 139,
+    "no_test_code": 116
+  }
+}
